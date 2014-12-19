@@ -6,20 +6,37 @@
 	<link href="css/bootstrap.css" rel="stylesheet" />
 	<link href="css/bootstrap-theme.css" rel="stylesheet" />
 	<script>
-	angular.module("sportsStore", []);
+        angular.module("sportsStore", ["customFilters"]);
 	</script>
+    <script src="js/controllers/sportsStore.js"></script>
+    <script src="js/filters/commonFilters.js"></script>
+    <script src="js/controllers/productListController.js"></script>
 </head>
-	<body>
+	<body ng-controller="sportsStoreCtrl">
 		<div class="navbar navbar-inverse">
 			<a class="navbar-brand" href="#">SPORTS STORE</a>
 		</div>
-		<div class="panel panel-default row">
+		<div class="panel panel-default row" ng-controller="productListCtrl">
+
+            <!--Category-->
 			<div class="col-xs-3">
-				Categories go here
+				<a ng-click="selectCategory()" class="btn btn-block btn-default btn-lg">Home</a>
+                <a ng-repeat="item in data.products | orderBy:'category' | unique:'category'"
+                   ng-click="selectCategory(item)" class="btn btn-block btn-default btn-lg">{{item}}</a>
 			</div>
+
+            <!--Product List-->
 			<div class="col-xs-8">
-				Products go here
+				<div class="well" ng-repeat="item in data.products">
+                    <h3>
+                        <strong>{{item.name}}</strong>
+                        <span class="pull-right label label-primary">
+                            {{item.price | currency}}
+                        </span>
+                    </h3>
+                    <span class="lead">{{item.description}}</span>
+                </div>
 			</div>
-			</div>
+        </div>
 	</body>
 </html>

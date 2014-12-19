@@ -1,0 +1,2 @@
+D:\Dev\Projects\DependencyViewer\obj\Debug\DependencyViewer.njsprojResolveAssemblyReference.cache
+D:\Dev\Projects\DependencyViewer\bin\Microsoft.NodejsTools.WebRole.dll

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5b40ac19-8ea0-45f4-b1d2-e64cdc0891b3}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>server\server.js</StartupFile>
+    <WorkingDirectory>server</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <StartWebBrowser>True</StartWebBrowser>
+    <LaunchUrl>
+    </LaunchUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="README.md" />
+    <Content Include="html\app.html" />
+    <Compile Include="server\server.js" />
+    <Content Include="html\css\bootstrap-theme.css" />
+    <Content Include="html\css\bootstrap-theme.min.css" />
+    <Content Include="html\css\bootstrap.css" />
+    <Content Include="html\css\bootstrap.min.css" />
+    <Content Include="html\fonts\glyphicons-halflings-regular.svg" />
+    <Compile Include="html\js\controllers\sportsStore.js" />
+    <Compile Include="html\js\lib\angular-resource.js" />
+    <Compile Include="html\js\lib\angular-route.js" />
+    <Compile Include="html\js\lib\angular.js" />
+    <Compile Include="html\js\lib\bootstrap.js" />
+    <Compile Include="html\js\lib\bootstrap.min.js" />
+    <Compile Include="html\js\lib\npm.js" />
+    <Content Include="server\sportsstore\public\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="html" />
+    <Folder Include="html\css" />
+    <Folder Include="html\fonts" />
+    <Folder Include="html\js" />
+    <Folder Include="html\js\components" />
+    <Folder Include="html\js\controllers" />
+    <Folder Include="html\js\filters" />
+    <Folder Include="html\js\lib" />
+    <Folder Include="html\js\ngmodules" />
+    <Folder Include="html\js\views" />
+    <Folder Include="server" />
+    <Folder Include="server\node_modules" />
+    <Folder Include="server\node_modules\connect" />
+    <Folder Include="server\node_modules\connect\lib" />
+    <Folder Include="server\node_modules\connect\node_modules" />
+    <Folder Include="server\node_modules\connect\node_modules\debug" />
+    <Folder Include="server\node_modules\connect\node_modules\debug\node_modules" />
+    <Folder Include="server\node_modules\connect\node_modules\debug\node_modules\ms" />
+    <Folder Include="server\node_modules\connect\node_modules\finalhandler" />
+    <Folder Include="server\node_modules\connect\node_modules\finalhandler\node_modules" />
+    <Folder Include="server\node_modules\connect\node_modules\finalhandler\node_modules\escape-html" />
+    <Folder Include="server\node_modules\connect\node_modules\finalhandler\node_modules\on-finished" />
+    <Folder Include="server\node_modules\connect\node_modules\finalhandler\node_modules\on-finished\node_modules" />
+    <Folder Include="server\node_modules\connect\node_modules\finalhandler\node_modules\on-finished\node_modules\ee-first" />
+    <Folder Include="server\node_modules\connect\node_modules\parseurl" />
+    <Folder Include="server\node_modules\connect\node_modules\utils-merge" />
+    <Folder Include="server\node_modules\serve-static" />
+    <Folder Include="server\node_modules\serve-static\node_modules" />
+    <Folder Include="server\node_modules\serve-static\node_modules\escape-html" />
+    <Folder Include="server\node_modules\serve-static\node_modules\parseurl" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\debug" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\depd" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\depd\lib" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\depd\lib\compat" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\destroy" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\etag" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\etag\node_modules" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\etag\node_modules\crc" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\etag\node_modules\crc\lib" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\fresh" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\mime" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\mime\types" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\ms" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\on-finished" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\on-finished\node_modules" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\on-finished\node_modules\ee-first" />
+    <Folder Include="server\node_modules\serve-static\node_modules\send\node_modules\range-parser" />
+    <Folder Include="server\node_modules\serve-static\node_modules\utils-merge" />
+    <Folder Include="server\sportsstore" />
+    <Folder Include="server\sportsstore\data" />
+    <Folder Include="server\sportsstore\public" />
+    <Folder Include="server\sportsstore\resources" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
