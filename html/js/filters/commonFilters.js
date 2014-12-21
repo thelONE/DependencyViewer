@@ -15,5 +15,35 @@
             } else {
                 return data;
             }
-        } 
-    });
+        }
+    })
+    // returns a range of elements from an array, corresponding to a page of products.
+    // The filter accepts arguments for the currently selected page (which is used to determine the start index of range)
+    // and the page size(which is used to determine the end index).
+    .filter("range", function ($filter) {
+        return function (data, page, size) {
+            if (angular.isArray(data) && angular.isNumber(page) && angular.isNumber(size)) {
+                var start_index = (page - 1) * size;;
+                if (data.length < start_index)
+                    return [];
+                else
+                    return $filter("limitTo")(data.splice(start_index), size);
+            } else
+                return data;
+        }
+    })
+
+    // The ng - repeat directive makes it easy to generate content, but it works only on data arrays.You can’ t, for example, have it repeat a specified number of times.
+    // My filter works out how many pages an array can be displayed in and then creates an array with that many numeric values. So,
+    // for example, if a data array can be displayed in three pages, then the result from the pageCount filter would be an array
+    // containing the values 1, 2, and 3. You’ll see why this is useful in the next section.
+    .filter("pageCount", function () {
+        return function (data, size) {
+            if (!angular.isArray(data))
+                return data;
+            var result = [];
+            for (var i = 0; i < Math.ceil(data.length / size); ++i)
+                result.push(i);
+            return result;
+        }
+    })
