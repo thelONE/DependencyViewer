@@ -19,13 +19,21 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include="html\admin.html" />
     <Content Include="html\js\components\cart\cartSummary.html" />
+    <Content Include="html\view\checkoutSummary.html" />
+    <Content Include="html\view\adminMain.html" />
+    <Content Include="html\view\placeOrder.html" />
     <Content Include="html\view\productList.html" />
+    <Content Include="html\view\thankYou.html" />
     <Content Include="README.md" />
     <Content Include="html\app.html" />
     <Compile Include="html\js\components\cart\cart.js" />
+    <Compile Include="html\js\controllers\adminController.js" />
+    <Compile Include="html\js\controllers\checkoutController.js" />
     <Compile Include="html\js\controllers\productListController.js" />
     <Compile Include="html\js\filters\commonFilters.js" />
+    <Compile Include="html\js\ngmodules\angular-route.js" />
     <Compile Include="server\server.js" />
     <Content Include="html\css\bootstrap-theme.css" />
     <Content Include="html\css\bootstrap-theme.min.css" />
