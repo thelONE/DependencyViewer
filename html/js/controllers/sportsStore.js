@@ -6,11 +6,12 @@ angular.module("sportsStore")
 })
 .controller("sportsStoreCtrl", function($scope, $http, dataUrl){
     $scope.data = {};
-    $http.get(dataUrl).success(function (data) {
+    $http.get(dataUrl)
+    .success(function (data) {
         $scope.data.products = data.results;
     })
-    .error(function (response) { 
-        $scope.data.error = response.error || response;
+    .error(function (error) {
+        $scope.data.error = error;
     });
 });
 

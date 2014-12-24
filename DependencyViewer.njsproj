@@ -7,7 +7,7 @@
     <ProjectHome />
     <ProjectView>ShowAllFiles</ProjectView>
     <StartupFile>server\server.js</StartupFile>
-    <WorkingDirectory>server</WorkingDirectory>
+    <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
@@ -19,8 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include="html\js\components\cart\cartSummary.html" />
+    <Content Include="html\view\productList.html" />
     <Content Include="README.md" />
     <Content Include="html\app.html" />
+    <Compile Include="html\js\components\cart\cart.js" />
+    <Compile Include="html\js\controllers\productListController.js" />
+    <Compile Include="html\js\filters\commonFilters.js" />
     <Compile Include="server\server.js" />
     <Content Include="html\css\bootstrap-theme.css" />
     <Content Include="html\css\bootstrap-theme.min.css" />
@@ -42,11 +47,12 @@
     <Folder Include="html\fonts" />
     <Folder Include="html\js" />
     <Folder Include="html\js\components" />
+    <Folder Include="html\js\components\cart\" />
     <Folder Include="html\js\controllers" />
     <Folder Include="html\js\filters" />
     <Folder Include="html\js\lib" />
     <Folder Include="html\js\ngmodules" />
-    <Folder Include="html\js\views" />
+    <Folder Include="html\view\" />
     <Folder Include="server" />
     <Folder Include="server\node_modules" />
     <Folder Include="server\node_modules\connect" />
