@@ -1,54 +1,35 @@
 <!DOCTYPE html>
-<html ng-app="sportsStore">
+<html ng-app="dependencyViewer">
 <head>
-	<title>SportsStore</title>
+	<title>Dependency Viewer</title>
 	<script src="js/lib/angular.js"></script>
 	<link href="css/bootstrap.css" rel="stylesheet" />
 	<link href="css/bootstrap-theme.css" rel="stylesheet" />
 	<script>
-        angular.module("sportsStore", ["customFilters", "cart", "ngRoute"])
+        angular.module("dependencyViewer", ["ngRoute", "dependencyViewer.data"])
         .config(function ($routeProvider) {
+        })
 
-            $routeProvider.when("/complete", {
-                templateUrl: "view/thankYou.html"
-            });
-
-            $routeProvider.when("/placeorder", {
-                templateUrl: "view/placeOrder.html"
-            });
-
-            $routeProvider.when("/checkout", {
-                templateUrl: "view/checkoutSummary.html"
-            });
-
-            $routeProvider.when("/products", {
-                templateUrl: "view/productList.html"
-            });
-
-            $routeProvider.otherwise({
-                templateUrl: "/view/productList.html"
-            });
-        });
 	</script>
-    <script src="js/controllers/sportsStore.js"></script>
-    <script src="js/filters/commonFilters.js"></script>
-    <script src="js/controllers/productListController.js"></script>
-    <script src="js/controllers/checkoutController.js"></script>
-    <script src="js/components/cart/cart.js"></script>
+    <script src="js/DependencyViewer.Data.js"></script>
     <script src="js/ngmodules/angular-route.js"></script>
 </head>
-	<body ng-controller="sportsStoreCtrl">
-		<div class="navbar navbar-inverse">
-			<a class="navbar-brand" href="#">SPORTS STORE</a>
-            <cart-summary/>
-		</div>
+<body ng-controller="dependencyViewerCtrl">
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">Dependency Viewer</a>
+        <cart-summary />
+    </div>
 
-        <!--Error Message box-->
-        <div class="alert alert-danger" ng-show="data.error">
-            Error {{data.error.status}}. The product data was not loaded.
-            <a href="/app.html" class="alert-link">Click here to try again</a>
-        </div>
+    <!--Error Message box-->
+    <div class="alert alert-danger" ng-show="data.error">
+        Error {{data.error.status}}.
+        <a href="/app.html" class="alert-link">Click here to try again</a>
+    </div>
 
-        <ng-view/>
-	</body>
+    <div class="well">
+        <div class="panel panel-default row" ng-repeat="bundle in data" ng-show="data">FILE : {{bundle._name}}, VERSION : {{bundle._version}}</div>
+    </div>
+
+
+</body>
 </html>

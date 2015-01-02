@@ -19,24 +19,22 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
-    <Content Include="html\admin.html" />
-    <Content Include="html\js\components\cart\cartSummary.html" />
-    <Content Include="html\view\adminLogin.html" />
-    <Content Include="html\view\adminOrders.html" />
-    <Content Include="html\view\adminProducts.html" />
-    <Content Include="html\view\checkoutSummary.html" />
-    <Content Include="html\view\adminMain.html" />
-    <Content Include="html\view\placeOrder.html" />
-    <Content Include="html\view\productList.html" />
-    <Content Include="html\view\thankYou.html" />
+    <Content Include="html\data\Patch_info_R10_android.xml" />
+    <Content Include="html\data\Patch_info_R10_ios.xml" />
+    <Content Include="html\data\Patch_info_R11_android.xml" />
+    <Content Include="html\data\Patch_info_R11_ios.xml" />
+    <Content Include="html\data\Patch_info_R1_android.xml" />
+    <Content Include="html\data\Patch_info_R2_android.xml" />
+    <Content Include="html\data\Patch_info_R3_android.xml" />
+    <Content Include="html\data\Patch_info_R6_android.xml" />
+    <Content Include="html\data\Patch_info_R7_android.xml" />
+    <Content Include="html\data\Patch_info_R8_android.xml" />
+    <Content Include="html\data\Patch_info_R8_ios.xml" />
+    <Content Include="html\data\Patch_info_R9_android.xml" />
+    <Content Include="html\data\Patch_info_R9_ios.xml" />
     <Content Include="README.md" />
     <Content Include="html\app.html" />
-    <Compile Include="html\js\components\cart\cart.js" />
-    <Compile Include="html\js\controllers\adminController.js" />
-    <Compile Include="html\js\controllers\adminProductController.js" />
-    <Compile Include="html\js\controllers\checkoutController.js" />
-    <Compile Include="html\js\controllers\productListController.js" />
-    <Compile Include="html\js\filters\commonFilters.js" />
+    <Compile Include="html\js\DependencyViewer.Data.js" />
     <Compile Include="html\js\ngmodules\angular-route.js" />
     <Compile Include="server\server.js" />
     <Content Include="html\css\bootstrap-theme.css" />
@@ -44,7 +42,6 @@
     <Content Include="html\css\bootstrap.css" />
     <Content Include="html\css\bootstrap.min.css" />
     <Content Include="html\fonts\glyphicons-halflings-regular.svg" />
-    <Compile Include="html\js\controllers\sportsStore.js" />
     <Compile Include="html\js\lib\angular-resource.js" />
     <Compile Include="html\js\lib\angular-route.js" />
     <Compile Include="html\js\lib\angular.js" />
@@ -56,10 +53,10 @@
   <ItemGroup>
     <Folder Include="html" />
     <Folder Include="html\css" />
+    <Folder Include="html\data\" />
     <Folder Include="html\fonts" />
     <Folder Include="html\js" />
     <Folder Include="html\js\components" />
-    <Folder Include="html\js\components\cart\" />
     <Folder Include="html\js\controllers" />
     <Folder Include="html\js\filters" />
     <Folder Include="html\js\lib" />
